@@ -4,3 +4,7 @@ debug/
 target/
 
 **/*.rs.bk
+
+main
+
+*.dSYM
