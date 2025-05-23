@@ -13,14 +13,12 @@ int main() {
         if (n % i == 0) {
             n /= i;
             factors.push_back(i);
-        } else {
+        } else
             i += 1;
-        }
     }
 
-    if (n > 1) {
+    if (n > 1)
         factors.push_back(n);
-    }
 
     std::cout << *std::max_element(factors.begin(), factors.end()) << std::endl;
 }
