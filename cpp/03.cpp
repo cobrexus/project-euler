@@ -4,9 +4,7 @@
 
 int main() {
     long n{600'851'475'143};
-
     int i{2};
-
     std::vector<long> factors{};
 
     while (i * i <= n) {
@@ -14,7 +12,7 @@ int main() {
             n /= i;
             factors.push_back(i);
         } else
-            i += 1;
+            ++i;
     }
 
     if (n > 1)

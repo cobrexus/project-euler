@@ -8,3 +8,6 @@ target/
 main
 
 *.dSYM
+
+obj/
+bin/
