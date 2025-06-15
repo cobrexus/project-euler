@@ -105,7 +105,7 @@ int main() {
 20849603980134001723930671666823555245252804609722 \
 53503534226472524250874054075591789781264330331690"};
 
-    std::array<long, 100> nums_arr{};
+    std::array<std::int64_t, 100> nums_arr{};
 
     std::istringstream iss{nums_str};
     std::string line{};
@@ -116,9 +116,9 @@ int main() {
         line.clear();
     }
 
-    long sum{};
+    std::int64_t sum{};
 
-    for (long n : nums_arr)
+    for (std::int64_t n : nums_arr)
         sum += n;
 
     sum /= 10;

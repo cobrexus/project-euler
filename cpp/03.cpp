@@ -3,9 +3,9 @@
 #include <vector>
 
 int main() {
-    long n{600'851'475'143};
+    std::int64_t n{600'851'475'143};
     int i{2};
-    std::vector<long> factors{};
+    std::vector<std::int64_t> factors{};
 
     while (i * i <= n) {
         if (n % i == 0) {

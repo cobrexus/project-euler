@@ -1,6 +1,6 @@
 #include <iostream>
 
-bool is_prime(long n) {
+bool is_prime(std::int64_t n) {
     if (n < 2)
         return false;
 
@@ -16,9 +16,9 @@ bool is_prime(long n) {
 }
 
 int main() {
-    long sum{};
+    std::int64_t sum{};
 
-    for (long i{}; i < 2'000'000; ++i)
+    for (std::int64_t i{}; i < 2'000'000; ++i)
         if (is_prime(i))
             sum += i;
 

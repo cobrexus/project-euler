@@ -20,10 +20,10 @@ int main() {
         "7109405077541002256983155200055935729725716362695618826704282524836008"
         "23257530420752963450"};
 
-    long max{};
+    std::int64_t max{};
 
     for (std::size_t i{}; i < num.size() - 12; ++i) {
-        long product{num[i] - '0'};
+        std::int64_t product{num[i] - '0'};
 
         for (std::size_t j{i + 1}; j < i + 13; ++j)
             product *= num[j] - '0';

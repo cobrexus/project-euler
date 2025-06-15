@@ -5,7 +5,7 @@ int main() {
     int ans{};
 
     for (int i{1}; i <= 1'000'000; ++i) {
-        long j{i};
+        std::int64_t j{i};
         int chain_len{1};
 
         while (j != 1) {
