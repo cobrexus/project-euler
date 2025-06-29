@@ -27,5 +27,5 @@ int main() {
         i += 1;
     }
 
-    std::cout << primes.back() << std::endl;
+    std::cout << primes.back() << '\n';
 }

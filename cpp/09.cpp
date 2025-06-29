@@ -15,5 +15,5 @@ int main() {
     }
 
 end:
-    std::cout << result << std::endl;
+    std::cout << result << '\n';
 }

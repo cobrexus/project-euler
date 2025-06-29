@@ -97,5 +97,5 @@ int main() {
         }
     }
 
-    std::cout << max_product << std::endl;
+    std::cout << max_product << '\n';
 }

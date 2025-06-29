@@ -125,5 +125,5 @@ int main() {
     sum /= 10;
     sum /= 10;
 
-    std::cout << sum << std::endl;
+    std::cout << sum << '\n';
 }

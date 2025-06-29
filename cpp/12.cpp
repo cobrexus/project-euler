@@ -15,7 +15,7 @@ int divisors(int n) {
 int main() {
     for (int i{1};; ++i) {
         if (divisors(triangle_num(i)) > 500) {
-            std::cout << triangle_num(i) << std::endl;
+            std::cout << triangle_num(i) << '\n';
             goto end;
         }
     }

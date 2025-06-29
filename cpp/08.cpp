@@ -31,5 +31,5 @@ int main() {
         max = std::max(max, product);
     }
 
-    std::cout << max << std::endl;
+    std::cout << max << '\n';
 }

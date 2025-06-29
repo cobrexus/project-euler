@@ -7,5 +7,5 @@ int main() {
         if (i % 3 == 0 || i % 5 == 0)
             sum += i;
 
-    std::cout << sum << std::endl;
+    std::cout << sum << '\n';
 }

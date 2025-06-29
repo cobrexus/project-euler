@@ -24,5 +24,5 @@ int main() {
         }
     }
 
-    std::cout << ans << std::endl;
+    std::cout << ans << '\n';
 }

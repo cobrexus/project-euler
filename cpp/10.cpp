@@ -22,5 +22,5 @@ int main() {
         if (is_prime(i))
             sum += i;
 
-    std::cout << sum << std::endl;
+    std::cout << sum << '\n';
 }

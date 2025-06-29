@@ -15,5 +15,5 @@ int main() {
         b += temp;
     }
 
-    std::cout << c << std::endl;
+    std::cout << c << '\n';
 }

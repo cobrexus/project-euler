@@ -18,5 +18,5 @@ int main() {
     if (n > 1)
         factors.push_back(n);
 
-    std::cout << *std::max_element(factors.begin(), factors.end()) << std::endl;
+    std::cout << *std::max_element(factors.begin(), factors.end()) << '\n';
 }

@@ -7,5 +7,5 @@ int main() {
              x % 17 == 0 && x % 18 == 0 && x % 19 == 0 && x % 20 == 0))
         x += 20;
 
-    std::cout << x << std::endl;
+    std::cout << x << '\n';
 }

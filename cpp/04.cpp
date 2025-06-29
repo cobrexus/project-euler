@@ -23,5 +23,5 @@ int main() {
         }
     }
 
-    std::cout << largest << std::endl;
+    std::cout << largest << '\n';
 }

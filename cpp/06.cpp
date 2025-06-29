@@ -13,5 +13,5 @@ int main() {
 
     sq_of_sum *= sq_of_sum;
 
-    std::cout << sq_of_sum - sum_of_sq << std::endl;
+    std::cout << sq_of_sum - sum_of_sq << '\n';
 }
