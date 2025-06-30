@@ -1,13 +1,13 @@
 #include <iostream>
 
 int main() {
-  int sum{};
+    int sum{};
 
-  for (int i{}; i < 1000; ++i) {
-    if (i % 3 == 0 || i % 5 == 0) {
-      sum += i;
+    for (int i{}; i < 1000; ++i) {
+        if (i % 3 == 0 || i % 5 == 0) {
+            sum += i;
+        }
     }
-  }
 
-  std::cout << sum << '\n';
+    std::cout << sum << '\n';
 }
