@@ -4,7 +4,7 @@
 #include <string>
 
 int main() {
-    std::string nums_str{"37107287533902102798797998220837590246510135740250 \
+  std::string nums_str{"37107287533902102798797998220837590246510135740250 \
 46376937677490009712648124896970078050417018260538 \
 74324986199524741059474233309513058123726617309629 \
 91942213363574161572522430563301811072406154908250 \
@@ -105,25 +105,26 @@ int main() {
 20849603980134001723930671666823555245252804609722 \
 53503534226472524250874054075591789781264330331690"};
 
-    std::array<std::int64_t, 100> nums_arr{};
+  std::array<std::int64_t, 100> nums_arr{};
 
-    std::istringstream iss{nums_str};
-    std::string line{};
+  std::istringstream iss{nums_str};
+  std::string line{};
 
-    for (std::size_t i{}; i < nums_arr.size(); ++i) {
-        iss >> line;
-        nums_arr[i] = std::stol(line.substr(0, 11));
-        line.clear();
-    }
+  for (std::size_t i{}; i < nums_arr.size(); ++i) {
+    iss >> line;
+    nums_arr[i] = std::stol(line.substr(0, 11));
+    line.clear();
+  }
 
-    std::int64_t sum{};
+  std::int64_t sum{};
 
-    for (std::int64_t n : nums_arr)
-        sum += n;
+  for (std::int64_t n : nums_arr) {
+    sum += n;
+  }
 
-    sum /= 10;
-    sum /= 10;
-    sum /= 10;
+  sum /= 10;
+  sum /= 10;
+  sum /= 10;
 
-    std::cout << sum << '\n';
+  std::cout << sum << '\n';
 }

@@ -6,8 +6,8 @@
 #include <string>
 
 int main() {
-    const std::string nums_str{
-        "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08 \
+  const std::string nums_str{
+      "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08 \
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00 \
 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65 \
 52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91 \
@@ -28,74 +28,74 @@ int main() {
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54 \
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"};
 
-    std::array<std::array<int, 20>, 20> nums_arr{};
+  std::array<std::array<int, 20>, 20> nums_arr{};
 
-    std::istringstream iss{nums_str};
-    std::string n{};
+  std::istringstream iss{nums_str};
+  std::string n{};
 
-    for (std::size_t i{}; i < 20; ++i) {
-        for (std::size_t j{}; j < 20; ++j) {
-            iss >> n;
+  for (std::size_t i{}; i < 20; ++i) {
+    for (std::size_t j{}; j < 20; ++j) {
+      iss >> n;
 
-            nums_arr[i][j] = std::stoi(n);
+      nums_arr[i][j] = std::stoi(n);
 
-            n.clear();
-        }
+      n.clear();
     }
+  }
 
-    int max_product{};
+  int max_product{};
 
-    // across
-    for (std::size_t i{}; i < 20; ++i) {
-        for (std::size_t j{}; j < 17; ++j) {
-            const int val1{nums_arr[i][j]};
-            const int val2{nums_arr[i][j + 1]};
-            const int val3{nums_arr[i][j + 2]};
-            const int val4{nums_arr[i][j + 3]};
+  // across
+  for (std::size_t i{}; i < 20; ++i) {
+    for (std::size_t j{}; j < 17; ++j) {
+      const int val1{nums_arr[i][j]};
+      const int val2{nums_arr[i][j + 1]};
+      const int val3{nums_arr[i][j + 2]};
+      const int val4{nums_arr[i][j + 3]};
 
-            max_product = std::max(max_product, val1 * val2 * val3 * val4);
-        }
+      max_product = std::max(max_product, val1 * val2 * val3 * val4);
     }
+  }
 
-    // down
-    for (std::size_t i{}; i < 17; ++i) {
-        for (std::size_t j{}; j < 20; ++j) {
-            const int val1{nums_arr[i][j]};
-            const int val2{nums_arr[i + 1][j]};
-            const int val3{nums_arr[i + 2][j]};
-            const int val4{nums_arr[i + 3][j]};
+  // down
+  for (std::size_t i{}; i < 17; ++i) {
+    for (std::size_t j{}; j < 20; ++j) {
+      const int val1{nums_arr[i][j]};
+      const int val2{nums_arr[i + 1][j]};
+      const int val3{nums_arr[i + 2][j]};
+      const int val4{nums_arr[i + 3][j]};
 
-            max_product = std::max(max_product, val1 * val2 * val3 * val4);
-        }
+      max_product = std::max(max_product, val1 * val2 * val3 * val4);
     }
+  }
 
-    // diagonally right and down
-    for (std::size_t i{}; i < 17; ++i) {
-        for (std::size_t j{}; j < 17; ++j) {
-            const int val1{nums_arr[i][j]};
-            const int val2{nums_arr[i + 1][j + 1]};
-            const int val3{nums_arr[i + 2][j + 2]};
-            const int val4{nums_arr[i + 3][j + 3]};
+  // diagonally right and down
+  for (std::size_t i{}; i < 17; ++i) {
+    for (std::size_t j{}; j < 17; ++j) {
+      const int val1{nums_arr[i][j]};
+      const int val2{nums_arr[i + 1][j + 1]};
+      const int val3{nums_arr[i + 2][j + 2]};
+      const int val4{nums_arr[i + 3][j + 3]};
 
-            max_product = std::max(max_product, val1 * val2 * val3 * val4);
-        }
+      max_product = std::max(max_product, val1 * val2 * val3 * val4);
     }
+  }
 
-    // diagonally left and down
-    for (std::size_t i{}; i < 17; ++i) {
-        for (std::size_t j{3}; j < 20; ++j) {
-            if (i >= 17 || j >= 17) {
-                continue;
-            }
+  // diagonally left and down
+  for (std::size_t i{}; i < 17; ++i) {
+    for (std::size_t j{3}; j < 20; ++j) {
+      if (i >= 17 || j >= 17) {
+        continue;
+      }
 
-            const int val1{nums_arr[i][j]};
-            const int val2{nums_arr[i + 1][j - 1]};
-            const int val3{nums_arr[i + 2][j - 2]};
-            const int val4{nums_arr[i + 3][j - 3]};
+      const int val1{nums_arr[i][j]};
+      const int val2{nums_arr[i + 1][j - 1]};
+      const int val3{nums_arr[i + 2][j - 2]};
+      const int val4{nums_arr[i + 3][j - 3]};
 
-            max_product = std::max(max_product, val1 * val2 * val3 * val4);
-        }
+      max_product = std::max(max_product, val1 * val2 * val3 * val4);
     }
+  }
 
-    std::cout << max_product << '\n';
+  std::cout << max_product << '\n';
 }
