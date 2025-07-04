@@ -1,5 +1,5 @@
 public final class Utils {
-    static boolean isPalindrome(int n) {
+    public static boolean isPalindrome(int n) {
         int m = n;
         int l = 0;
 
@@ -12,7 +12,7 @@ public final class Utils {
         return l == n;
     }
 
-    static boolean isPrime(long n) {
+    public static boolean isPrime(long n) {
         if (n < 2) {
             return false;
         }
