@@ -11,8 +11,9 @@ int main() {
         if (n % i == 0) {
             n /= i;
             factors.push_back(i);
-        } else
+        } else {
             ++i;
+        }
     }
 
     if (n > 1) {
