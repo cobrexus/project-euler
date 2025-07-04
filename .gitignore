@@ -11,3 +11,6 @@ main
 
 obj/
 bin/
+
+.idea
+out/
